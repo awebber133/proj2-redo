@@ -6,6 +6,5 @@ terraform/.terraform/
 *.tfstate
 *.tfstate.backup
 
-
-# Secrets
+#Secrets
 *.pem
