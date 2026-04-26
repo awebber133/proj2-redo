@@ -6,8 +6,6 @@ terraform/.terraform/
 *.tfstate
 *.tfstate.backup
 
-# DO NOT ignore the lock file
-!.terraform.lock.hcl
 
 # Secrets
 *.pem
