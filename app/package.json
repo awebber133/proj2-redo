@@ -1,0 +1,12 @@
+{
+  "name": "sunrise-quote-app",
+  "version": "1.0.0",
+  "description": "Amelia Earhart quote over a sunrise/sunset background",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.0"
+  }
+}
