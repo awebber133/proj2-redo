@@ -6,11 +6,13 @@ metadata:
     {{- include "helm-chart.labels" . | nindent 4 }}
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: "instance"
+    service.beta.kubernetes.io/aws-load-balancer-listener-port: "5000"
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: {{ .Values.service.targetPort }}
+    - port: {{ .Values.service.port }}        # 5000
+      targetPort: {{ .Values.service.targetPort }}  # 3000
       protocol: TCP
       name: http
   selector:
