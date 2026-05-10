@@ -1,0 +1,25 @@
+replicaCount: 1
+
+image:
+  repository: 238845559349.dkr.ecr.us-east-1.amazonaws.com/app-repository
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 3000
+
+resources: {}
+
+livenessProbe:
+  httpGet:
+    path: /
+    port: 3000
+
+readinessProbe:
+  httpGet:
+    path: /
+    port: 3000
+
+autoscaling:
+  enabled: false
